@@ -72,19 +72,20 @@ The AI Content Engine follows a microservices architecture with cloud-native des
 **Technology Stack:**
 - Runtime: Python 3.11+ with FastAPI
 - AI Models:
-  - Text: GPT-J-6B, BLOOM-7B (multilingual), IndicBERT
-  - Translation: IndicTrans2, mBART-50
+  - Text: Bhashini AI, BLOOM-7B (multilingual), IndicBERT
+  - Translation: Sarvam AI, IndicTrans2 
   - Enhancement: T5-base for paraphrasing
 - Model Serving: vLLM or TorchServe
 - Queue: RabbitMQ for async processing
 
 **API Endpoints:**
 ```
-POST /api/v1/generate/text
-POST /api/v1/generate/image
-POST /api/v1/translate
-POST /api/v1/enhance
-GET  /api/v1/generate/status/{job_id}
+[POST /api/v1/generate/text](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_API_KEY)
+[POST /api/v1/generate/image](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_API_KEY)
+POST https://api.sarvam.ai/speech-to-text-translateHeader: "api-subscription-key": "YOUR_API_KEY"
+[POST /api/v1/enhance
+GET  /api/v1/generate/status/{job_id}](https://api-inference.huggingface.co/models/ai4bharat/indic-tts-coqui-indo-aryan-gpu
+Header: "Authorization": "Bearer hf_...")
 ```
 
 **Data Flow:**
@@ -110,9 +111,11 @@ GET  /api/v1/generate/status/{job_id}
 **Technology Stack:**
 - Runtime: Python 3.11+ with FastAPI
 - ML Framework: PyTorch, Scikit-learn
-- Recommendation: Surprise library, custom collaborative filtering
+- Frontend: React.js, Tailwind CSS, XML
+- Backend: Node.js
+- DataBase: Firebase
 - Feature Store: Redis for real-time features
-- Batch Processing: Apache Spark (optional for scale)
+- Batch Processing: Apache 2.0 (optional for scale)
 
 **Algorithms:**
 - Collaborative Filtering (User-User, Item-Item)
@@ -826,3 +829,4 @@ To minimize costs, consider:
 **Document Version:** 1.0  
 **Last Updated:** February 15, 2026  
 **Status:** Draft for Review
+
