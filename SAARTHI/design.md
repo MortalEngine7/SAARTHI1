@@ -80,11 +80,13 @@ The AI Content Engine follows a microservices architecture with cloud-native des
 
 **API Endpoints:**
 ```
-POST /api/v1/generate/text
-POST /api/v1/generate/image
-POST /api/v1/translate
-POST /api/v1/enhance
-GET  /api/v1/generate/status/{job_id}
+https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_API_KEY  
+https://image.pollinations.ai/prompt/{safe_prompt}?seed={seed}&width=512&height=512&nologo=true
+POST https://api.sarvam.ai/speech-to-text-translateHeader: "api-subscription-key": "YOUR_API_KEY"
+[POST /api/v1/enhance](https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=YOUR_API_KEY )
+[GET  /api/v1/generate/status/{job_id}](https://api-inference.huggingface.co/models/ai4bharat/indic-tts-coqui-indo-aryan-gpu
+Header: "Authorization": "Bearer hf_..."
+)
 ```
 
 **Data Flow:**
@@ -110,7 +112,9 @@ GET  /api/v1/generate/status/{job_id}
 **Technology Stack:**
 - Runtime: Python 3.11+ with FastAPI
 - ML Framework: PyTorch, Scikit-learn
-- Recommendation: Surprise library, custom collaborative filtering
+- Front-End: REACT.js, Tailwind CSS, XML
+- Back-end: Node.js
+- Database: Firebase
 - Feature Store: Redis for real-time features
 - Batch Processing: Apache Spark (optional for scale)
 
@@ -826,3 +830,4 @@ To minimize costs, consider:
 **Document Version:** 1.0  
 **Last Updated:** February 15, 2026  
 **Status:** Draft for Review
+
